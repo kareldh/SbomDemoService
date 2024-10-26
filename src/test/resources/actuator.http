@@ -1,0 +1,30 @@
+GET http://localhost:8082/sbomdemoservice/actuator
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8082/sbomdemoservice/actuator/health
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8082/sbomdemoservice/actuator/loggers
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8082/sbomdemoservice/actuator/metrics
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+//SBOM
+GET http://localhost:8082/sbomdemoservice/actuator/sbom
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###
+
+GET http://localhost:8082/sbomdemoservice/actuator/sbom/application
+Content-Type: application/vnd.spring-boot.actuator.v3+json
+
+###

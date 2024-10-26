@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: SbomDemoService
+server:
+  servlet:
+    context-path: /sbomdemoservice
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,loggers,metrics,sbom
+
