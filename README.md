@@ -58,6 +58,7 @@ Dependency-Track: https://docs.dependencytrack.org/.
 >  - Modified components
 >  - License risk
 
+Uses Apache 2.0 license https://github.com/DependencyTrack/dependency-track/blob/master/LICENSE.txt, so free for commercial use
 
 
 ## Alternatives/extensions for dependency/vulnerability management
