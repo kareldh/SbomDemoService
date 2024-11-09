@@ -60,7 +60,6 @@ abstract class PublishSBOM extends DefaultTask {
     }
 
     private static void uploadFile(String uploadUrl, String apiKey, String base64FileContent, String projectUuid) {
-//        println("SBOM base64 file: $base64FileContent")
 
         def jsonBody = "{\"project\": \"$projectUuid\", \"bom\": \"$base64FileContent\"}"
 
@@ -95,6 +94,6 @@ tasks.register("publishSBOM", PublishSBOM) {
     projectUuid = "7b0cb7b6-515a-41a7-aa9f-17a6f4db7489"
 }
 
-build.configure {
-    finalizedBy publishSBOM
-}
+//build.configure {
+//    finalizedBy publishSBOM
+//}

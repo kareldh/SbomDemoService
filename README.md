@@ -4,19 +4,36 @@ Spring Boot 3.3 demo application with the new CycloneDX autoconfiguration
 https://spring.io/blog/2024/05/24/sbom-support-in-spring-boot-3-3
 
 ## What is SBOM?
-Software Bill Of Materials: declares the inventory of software components and dependencies. Analogous to the traditional Bill Of Materials (BOM) in manufacturing that lists all the materials/components/parts used to create an end product. 
+Software Bill Of Materials: declares the inventory of software components and dependencies. Analogous to the traditional Bill Of Materials (BOM) in manufacturing that lists all the materials/components/parts used to create an end product.
+
+multiple standards:
+- CycloneDx https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf
+- SPDX: https://spdx.dev/about/overview/
+- Syft: https://github.com/anchore/syft
 
 ## Why do we need SBOM?
 Keeping track of vulnerabilities and thus of your dependencies is as important as ever.
 
 ### Legislation
-#### Europe/Belgium
-- NIS2 https://ccb.belgium.be/nl/document/de-nis2-richtlijn-wat-betekent-dit-voor-mijn-organisatie
-- DORA https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en
-- CRA https://ccb.belgium.be/en/cyber-resilience-act-cra
+
+#### Europe
+- Network and Information Security directive 2 (NIS2)
+  - SCOPE:  critical sectors listed in NIS2 (banking, energy, transport, financial, ict, ...)
+> *"...Risk analysis and information systems security policies..." - https://ccb.belgium.be/en/document/nis-2-directive-what-does-it-mean-my-organization
+- Digital Operational Resilience Act (DORA)
+  - SCOPE: financial sector
+> *"...Principles and requirements on ICT risk management framework..."* - https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en
+- Cyber Resilience Act (CRA) 
+  - SCOPE: hardware products with connected features, software sold on standalone basis
+> *"...obligations throughout the whole lifecycle of the connected product, especially as regards vulnerability management..."* - https://ccb.belgium.be/en/cyber-resilience-act-cra
+
+#### USA
+- US Executive Order 14028
+> *"...(vii)   providing a purchaser a Software Bill of Materials (SBOM) for each product directly or by publishing it on a public website..."* - https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/
 
 ### Managing critical vulnerabilities
-Log4J vulnerability 2022 https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance
+- Log4J vulnerability 2022 
+  - https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance
 
 ## How can we get generate an SBOM?
 ### Spring Boot
@@ -32,15 +49,14 @@ https://cyclonedx.org/guides/
 
 Dependency-Track: https://docs.dependencytrack.org/.
 
-*Dependency-Track monitors component usage across all versions of every application in its portfolio in order to proactively identify risk across an organization. The platform has an API-first design and is ideal for use in CI/CD environments.*
-
-- *Tracks component usage across every application in an organizations portfolio*
-- *Quickly identify what is affected, and where*
-- *Identifies multiple forms of risk including*
-  - Components with known vulnerabilities
-  - Out-of-date components
-  - Modified components
-  - License risk
+> *Dependency-Track monitors component usage across all versions of every application in its portfolio in order to proactively identify risk across an organization. The platform has an API-first design and is ideal for use in CI/CD environments.*
+> - *Tracks component usage across every application in an organizations portfolio*
+> - *Quickly identify what is affected, and where*
+> - *Identifies multiple forms of risk including*
+>  - Components with known vulnerabilities
+>  - Out-of-date components
+>  - Modified components
+>  - License risk
 
 
 
