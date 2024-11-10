@@ -56,7 +56,7 @@ abstract class PublishSBOM extends DefaultTask {
 
     private static String encodeBase64(String filePath) {
         try {
-            def fileContents = new File(filePath).getText('windows-1252')
+            def fileContents = new File(filePath).getText('windows-1252') // the created SBOM file is windows-1252 encoded on a Windows machine
             return fileContents.bytes.encodeBase64().toString()
         } catch (Exception e) {
             throw new GradleException("Failed to read or encode file contents: $e", e)
