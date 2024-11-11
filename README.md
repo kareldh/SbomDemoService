@@ -19,7 +19,7 @@ Keeping track of vulnerabilities and thus of your dependencies is as important a
 #### Europe
 - Network and Information Security directive 2 (NIS2)
   - SCOPE:  critical sectors listed in NIS2 (banking, energy, transport, financial, ict, ...)
-> *"...Risk analysis and information systems security policies..." - https://ccb.belgium.be/en/document/nis-2-directive-what-does-it-mean-my-organization
+> *"...Risk analysis and information systems security policies..."* - https://ccb.belgium.be/en/document/nis-2-directive-what-does-it-mean-my-organization
 - Digital Operational Resilience Act (DORA)
   - SCOPE: financial sector
 > *"...Principles and requirements on ICT risk management framework..."* - https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en
