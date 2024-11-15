@@ -13,3 +13,21 @@ Content-Type: application/json
 }
 
 ###
+
+#list projects
+GET http://localhost:8081/api/v1/project
+X-API-Key: odt_IPQOq3JwZenZ6Pt59huLFvYNlzRhbn9P
+Content-Type: application/json
+
+###
+
+#desactivate project
+PATCH http://localhost:8081/api/v1/project/a05f4b1f-dfba-42ea-9fdc-8788e59d08dc
+X-API-Key: odt_IPQOq3JwZenZ6Pt59huLFvYNlzRhbn9P
+Content-Type: application/json
+
+{
+  "active": false
+}
+
+###
