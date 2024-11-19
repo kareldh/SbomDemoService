@@ -6,6 +6,10 @@ https://spring.io/blog/2024/05/24/sbom-support-in-spring-boot-3-3
 ## What is SBOM?
 Software Bill Of Materials: declares the inventory of software components and dependencies. Analogous to the traditional Bill Of Materials (BOM) in manufacturing that lists all the materials/components/parts used to create an end product.
 
+https://cyclonedx.org/capabilities/sbom/
+
+https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf
+
 multiple standards:
 - CycloneDx https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf
 - SPDX: https://spdx.dev/about/overview/
