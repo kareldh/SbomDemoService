@@ -54,7 +54,7 @@ abstract class PublishSBOM extends DefaultTask {
             put.setRequestMethod("PUT")
             put.setDoOutput(true)
             put.setRequestProperty("Content-Type", "application/json")
-            put.setRequestProperty("X-API-Key", apiKey)
+            put.setRequestProperty("X-Api-Key", apiKey)
             put.getOutputStream().write(message.getBytes("UTF-8"));
             def responseCode = put.getResponseCode();
             if (responseCode == 200) {
@@ -76,9 +76,9 @@ tasks.register("publishSBOM", PublishSBOM) {
     description = "Upload SBOM to CycloneDx"
     dependsOn build
 
-    filePath = "build/reports/application.cdx.json"
+    filePath = "build/reports/cyclonedx/application.cdx.json"
     uploadUrl = "http://localhost:8081/api/v1/bom"
-    apiKey = "odt_Noe8Y14ZoJCw5QsSXUa1SUUH5LYgTYs3"
+    apiKey = "odt_G4vTCMfr_eCoaoBkLTYAp9mnDQvsxObc4zGWIcJuo" // to gererate a key, see https://docs.dependencytrack.org/integrations/rest-api/, needs BOM_UPLOAD and PORTFOLIO_MANAGEMENT or PROJECT_CREATION_UPLOAD
 //    projectUuid = "7b0cb7b6-515a-41a7-aa9f-17a6f4db7489"
     projectName = "SbomDemoService"
     projectVersion = project.version
